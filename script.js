@@ -3,6 +3,10 @@ var todoList = {
     displayTodos: function() {
         console.log('myTodos', this.todos);
     },
-    addTodo: function() 
+    addTodo: function(todo) {
+        this.todos.push(todo);
+        displayTodos();
+    },
+    
 
 };
