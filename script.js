@@ -17,8 +17,11 @@ var todoList = {
     deleteTodo: function(position) {
         this.todos.splice(position, 1);
         this.displayTodos();
+    },
+    toggleComplete: function(position) {
+        var todo = this.todos[position];
+        todo.completed = !todo.completed;
     }
-
 };
 
 
