@@ -1,10 +1,10 @@
 var todoList = {
     todos : [],
     displayTodos: function () {
-        console.log('myTodos:');
         if (this.todos.length === 0) {
             console.log('Your todos list is empty');
         } else {
+            console.log('myTodos:');
             for (var i = 0; i < this.todos.length; i++) {
                 console.log(this.todos[i].todoText);
             }
