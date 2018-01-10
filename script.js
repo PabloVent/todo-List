@@ -6,7 +6,11 @@ var todoList = {
         } else {
             console.log('myTodos:');
             for (var i = 0; i < this.todos.length; i++) {
-                console.log(this.todos[i].todoText);
+                if (this.todos[i].completed === true) {
+                    console.log('(X)', this.todos[i].todoText);
+                } else {
+                    console.log('( )', this.todos[i].todoText);
+                }
             }
         }
     },
@@ -31,6 +35,6 @@ var todoList = {
     }
 };
 
-// todoList.toggleCompleted should flip the completed property, version 4, video 4.
+// version 5, video 5.
 
 
