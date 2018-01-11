@@ -36,6 +36,6 @@ var todoList = {
     }
 };
 
-// version 5, video 5.
+// see next version 6, video 1.
 
 
