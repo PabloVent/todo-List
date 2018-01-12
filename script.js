@@ -59,6 +59,10 @@ var todoList = {
     }
 };
 
+// We want to get access to the display Todos button
+// We want to run displayTodos method when someone clicks the display Todos button.
+
+
 // see next version 7, video 1.
 
 
