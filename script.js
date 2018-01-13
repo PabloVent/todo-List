@@ -59,8 +59,6 @@ var todoList = {
     }
 };
 
-// 1.- We want to get access to the display Todos button.
-
 handlers = {
     displayTodos: function () {
         todoList.displayTodos();
