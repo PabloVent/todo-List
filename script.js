@@ -59,6 +59,15 @@ var todoList = {
     }
 };
 
+// Obj takes the todos and displays them to the screen.
+view = {
+    displayTodos:function() {
+        var todosUl = document.querySelector('ul');
+        var todoLi = document.createElement('li');
+        todosUl.appendChild(todoLi);
+    }
+};
+
 handlers = {
     displayTodos: function () {
         todoList.displayTodos();
