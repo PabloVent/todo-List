@@ -70,6 +70,11 @@ handlers = {
         var addTodoTextInput = document.getElementById('addTodoTextInput');
         todoList.addTodo(addTodoTextInput.value);
         addTodoTextInput.value = '';
+    },
+    changeTodo: function() {
+        var changeTodoTextInput = document.getElementById('changeTodoTextInput');
+        todoList.changeTodo(changeTodoTextInput.value);
+        changeTodoTextInput.value = '';
     }
 };
 
