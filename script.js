@@ -49,22 +49,13 @@ var todoList = {
             for (var i = 0; i < totalTodos; i++) {
                 this.todos[i].completed = false;
             }
-        // Case 2: Else if everything is false, make it true.
+            // Case 2: Else if everything is false, make it true.
         } else {
             for (var i = 0; i < totalTodos; i++) {
-            this.todos[i].completed = true;
+                this.todos[i].completed = true;
             }
         }
         this.displayTodos();
-    }
-};
-
-// Obj takes the todos and displays them to the screen.
-view = {
-    displayTodos:function() {
-        var todosUl = document.querySelector('ul');
-        var todoLi = document.createElement('li');
-        todosUl.appendChild(todoLi);
     }
 };
 
@@ -77,23 +68,32 @@ handlers = {
         todoList.addTodo(addTodoTextInput.value);
         addTodoTextInput.value = '';
     },
-    changeTodo: function() {
+    changeTodo: function () {
         var changeTodoPositionInput = document.getElementById('changeTodoPositionInput');
         var changeTodoTextInput = document.getElementById('changeTodoTextInput');
         todoList.changeTodo(changeTodoPositionInput.valueAsNumber, changeTodoTextInput.value);
         changeTodoPositionInput.value = '';
         changeTodoTextInput.value = '';
     },
-    deleteTodo: function() {
+    deleteTodo: function () {
         var deleteTodoPositionInput = document.getElementById('deleteTodoPositionInput');
         todoList.deleteTodo(deleteTodoPositionInput.valueAsNumber);
         deleteTodoPositionInput.value = '';
     },
-    toggleCompleted: function() {
+    toggleCompleted: function () {
         var toggleCompletedPositionInput = document.getElementById('toggleCompletedPositionInput');
         todoList.toggleCompleted(toggleCompletedPositionInput.valueAsNumber);
         toggleCompletedPositionInput.value = '';
     }
 };
 
-
+// Obj takes the todos and displays them to the screen.
+view = {
+    displayTodos: function () {
+        for (var i = 0; i < todoList.todos.length; i++) {
+            var todosUl = document.querySelector('ul');
+            var todoLi = document.createElement('li');
+            todosUl.appendChild(todoLi);
+        }
+    }
+};
