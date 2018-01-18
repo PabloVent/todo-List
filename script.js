@@ -20,23 +20,21 @@ var todoList = {
         var totalTodos = this.todos.length;
         var completedTodos = 0;
         // Get number of completed todos.
-            this.todos.forEach(function(todo) {
-            if(todo.completed === true) {
+        this.todos.forEach(function (todo) {
+            if (todo.completed === true) {
                 completedTodos++;
             }
         });
 
-        // Case 1: If everthing is true, make everything false.
-        if (completedTodos === totalTodos) {
-            this.todos.forEach(function(todo) {
+        this.todos.forEach(function (todo) {
+            // Case 1: If everthing is true, make everything false.
+            if (completedTodos === totalTodos) {
                 todo.completed = false;
-            });
-            // Case 2: Else if everything is false, make it true.
-        } else {
-            this.todos.forEach(function(todo) {
+                // Case 2: Else if everything is false, make it true.
+            } else {
                 todo.completed = true;
-            });
-        }
+            }
+        });
     }
 };
 
